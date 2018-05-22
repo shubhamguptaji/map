@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighbourhood Map</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="js/knockout.js"></script>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="floating-panel">
+		<div class="center">
+			<div class="white">
+				<h3>
+					Enter Location You Want to Search
+				</h3>	
+			</div>
+			<input type="text" name="search-bar-text" data-bind="value: defaultLoc" id="search-bar-text">
+			<button class="glyphicon glyphicon-search padd" type="submit" data-bind="click: start"></button>
+		</div>
+		<div class="big">
+			<span class="white">Choose type of place</span>
+			<span>
+				<select data-bind="options: categories, value: selectedCategory, optionsCaption: 'All...'">
+				</select>
+			</span>
+			<button type="submit" data-bind="click: filterMarkers">Filter</button>
+		</div>
+		<div class="center hello overflow">
+			<div data-bind="foreach: markersList">
+				<div>
+					<a href="#" data-bind="text: title, click: $parent.animateMarker"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id=map></div>
+	<script src="js/script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyD1dzWgrUVzHIhtcNpnyKWTqJOf0Dg6w2I&callback=initMap"></script>
+</body>
+</html>
