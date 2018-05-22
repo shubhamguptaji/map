@@ -7,7 +7,6 @@ var count=0;
 function getPlaces(location, type) {
 	var foursquare_client_id = 'WX1F1S0PHLZB5KI5E2OJIH50AOHVZIIXBP0A3N4NX4WIPMYQ';
 	var foursquare_client_secret = 'D2Z04G3N4XVWDQJ2O5G5S0SNQCOG15HLDYGDG1IMAMBYJPL4';
-	console.log(location.lat);
 	for(var i=0;i<type.length;i++) {
 		var foursquare_url = "https://api.foursquare.com/v2/venues/explore?limit=5&range=5000&ll="+location.lat+","+location.lng+"&client_id="+foursquare_client_id+"&client_secret="+foursquare_client_secret+"&v=20180522&query="+type[i];
 		$.ajax({
@@ -100,10 +99,8 @@ function populateInfoWindow(marker, infowindow) {
 function findlocation(address) {
 	for(var i=0;i<markers.length;i++) {
 		markers[i].setMap(null);
-		console.log(i);
 	}
 	markers=[];
-	console.log(address);
 	if(address === '') {
 		alert("You must enter address first!!!!!!!");
 	} else {
