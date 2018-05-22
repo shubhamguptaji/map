@@ -17,4 +17,4 @@ In this project you can find nearby hotels, libraries and hospitals by searching
 
 # Screenshot
 
-![Optional Text](../master/myFolder/image.png)
+!(../master/myfolder/screenshot.png)
