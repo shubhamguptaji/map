@@ -64,7 +64,7 @@ function createMarkers(locations) {
 		});
 	}
 	if (count == type.length - 1) {
-		mdl.fillMarkersList();
+		model.fillMarkersList();
 		showAllMarkers(markers);
 	}
   	if (count == type.length) count = 1;
@@ -178,5 +178,5 @@ var viewModel = function() {
 	};
 }
 
-mdl = new viewModel();
-ko.applyBindings(mdl);
+model = new viewModel();
+ko.applyBindings(model);
