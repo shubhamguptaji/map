@@ -108,7 +108,7 @@ function toggleBounce(marker) {
 
 // this function adds content to the marker
 function populateInfoWindow(marker, infowindow) {
-	if(infowindow.marker != marker) {
+	if (infowindow.marker != marker) {
 		infowindow.marker = marker;
 		infowindow.addListener('closeclick', function() {
 			infowindow.setMarker = null;
@@ -125,7 +125,7 @@ function findlocation(address) {
 		markers[i].setMap(null);
 	}
 	markers=[];
-	if(address === '') {
+	if (address === '') {
 		alert("You must enter address first!!!!!!!");
 	} else {
 		geocoder.geocode({
@@ -191,7 +191,7 @@ var viewModel = function() {
 	self.filterMarkers = function() {
 		self.markersList([]);
 		for(var i = 0; i < markers.length; i++) {
-			if(markers[i].category == selectedCategory() || selectedCategory() == undefined) {
+			if (markers[i].category == selectedCategory() || selectedCategory() == undefined) {
 				markers[i].setVisible(true);
 				self.markersList.push(new markerData(markers[i]));
 			}
