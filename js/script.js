@@ -36,7 +36,7 @@ function getPlaces(location, type) {
 	}
 }
 
-// function to load the map 
+// function to load the map
 function initMap() {
 	var defaultLocation =  {
 			lat:  51.508530, lng: -0.076132
@@ -81,8 +81,8 @@ function createMarkers(locations) {
 		model.fillMarkersList();
 		showAllMarkers(markers);
 	}
-  	if (count == type.length) count = 1;
-  	count++;
+	if (count == type.length) count = 1;
+	count++;
 	
 }
 // this function shows all the markers
@@ -97,13 +97,13 @@ function showAllMarkers(markers) {
 
 // animates the marker
 function toggleBounce(marker) {
-    if (last) last.setAnimation(null);
-    if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
-    } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-    last = marker;
+	if (last) last.setAnimation(null);
+	if (marker.getAnimation() !== null) {
+		marker.setAnimation(null);
+	} else {
+		marker.setAnimation(google.maps.Animation.BOUNCE);
+	}
+	last = marker;
 }
 
 // this function adds content to the marker
@@ -133,19 +133,20 @@ function findlocation(address) {
 		}, function(results, status) {
 			if (status === google.maps.GeocoderStatus.OK) {
 				var loc = results[0].geometry.location.toString();
-      			var locarray = loc.split('(')[1].split(',');
-      			var latitude = parseFloat(locarray[0]);
-      			var longitude = parseFloat(locarray[1].split(')')[0]);
-      			var searchedLocation = {
-        			lat: latitude,
-        			lng: longitude
-        		};
+				var locarray = loc.split('(')[1].split(',');
+				var latitude = parseFloat(locarray[0]);
+				var longitude = parseFloat(locarray[1].split(')')[0]);
+				var searchedLocation = {
+					lat: latitude,
+					lng: longitude
+				};
 				map.setCenter(searchedLocation);
 				map.setZoom(15);
 				getPlaces(searchedLocation,type);
 			} else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        	}
+				alert('Geocode was not successful!');
+			}
+
 		});
 	}
 }
