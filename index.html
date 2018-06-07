@@ -8,35 +8,42 @@
 	<script src="js/jquery.min.js"></script>
 </head>
 <body>
-	<div id="toggle"><button>Search your Location</button></div>
+	<div id="toggle"><button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy1SLNGleGprJzB75tFyqHPFvxu4NLgO2xxifC8V_02AyBd6i9iw" height="75px" width="75px"></button></div>
 	<div id="container">
 		<div class="floating-panel">
 			<div class="center">
 				<div class="white">
-					<h3>
+					<h2>
 						Enter Location You Want to Search
-					</h3>	
+					</h2>
 				</div>
-				<input type="text" name="search-bar-text" data-bind="value: defaultLoc" id="search-bar-text">
-				<button class="glyphicon glyphicon-search padd" type="submit" data-bind="click: start"></button>
+				<span class="col-md-8">
+					<input class="form-control input-lg" type="text" name="search-bar-text" data-bind="value: defaultLoc, click: start" id="search-bar-text">
+				</span>
+				<span class="col-md-4">
+					<button class="glyphicon glyphicon-search padd btn btn-primary btn-lg" type="submit" data-bind="click: start"></button>
+				</span>
 			</div>
-			<div class="big">
-				<span class="white">Choose type of place</span>
+			<br />
+			<div class="big white top">
+				<span>Choose type of Place</span>
 				<span>
-					<select data-bind="options: categories, value: selectedCategory, optionsCaption: 'All...'">
+					<select data-bind="options: categories, value: selectedCategory, click: filterMarkers, optionsCaption: 'All...'">
 					</select>
 				</span>
-				<button type="submit" data-bind="click: filterMarkers">Filter</button>
 			</div>
-			<div class="center hello overflow">
+			<div class="center hello blue overflow">
 				<div data-bind="foreach: markersList">
-					<div>
-						<a href="#" data-bind="text: title, click: $parent.animateMarker"></a>
+					<div class="list">
+						<a href="#" class="none" data-bind="text: title, click: $parent.animateMarker"></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+		$('.floating-panel').toggle();
+	</script>
 	<div id=map></div>
 	<script src="js/script.js"></script>
 	<script async defer onerror="error()" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyD1dzWgrUVzHIhtcNpnyKWTqJOf0Dg6w2I&callback=initMap"></script>
