@@ -3,6 +3,7 @@
     z-index: 5;
     background-color: white;
     max-height: 75%;
+    min-height: 50%;
     max-width: 300px;
     bottom: 100px;
     left: 20px;
