@@ -5,12 +5,13 @@
     max-height: 75%;
     min-height: 50%;
     max-width: 300px;
-    bottom: 100px;
+    bottom: 125px;
     left: 20px;
     padding: 5px;
     border: 1px solid #999;
     text-align: center;
     padding-left: 10px;
+    
 }
 
 html, body { 
