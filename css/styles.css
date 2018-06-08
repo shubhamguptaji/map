@@ -2,9 +2,9 @@
     position: absolute;
     z-index: 5;
     background-color: white;
-    max-height: 100%;
+    max-height: 98%;
     max-width: 300px;
-    bottom: 125px;
+    bottom: 75px;
     left: 20px;
     padding: 5px;
     border: 1px solid #999;
