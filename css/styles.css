@@ -2,8 +2,7 @@
     position: absolute;
     z-index: 5;
     background-color: white;
-    max-height: 75%;
-    min-height: 40%;
+    max-height: 50%;
     max-width: 300px;
     bottom: 125px;
     left: 20px;
