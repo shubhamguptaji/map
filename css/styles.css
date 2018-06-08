@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 5;
     background-color: white;
-    max-height: 92%;
+    max-height: 90%;
     max-width: 300px;
     bottom: 75px;
     left: 20px;
@@ -58,8 +58,8 @@ button {
     margin-top: 25px;
     background-color: white;
     max-width: 300px; 
-    height: 200px;
-    margin-bottom: 25px;
+    height: 180px;
+    margin-bottom: 15px;
     overflow-x: hidden;
     color: black;
 }
