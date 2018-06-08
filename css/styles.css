@@ -31,7 +31,6 @@ html, body {
 .white {
     color: black;
     margin-left: 25px;
-    margin-top: 25px;
 }
 
 button {
@@ -51,7 +50,6 @@ button {
 
 .big {
     font-size: 20px;
-    margin-top: 50px;
 }
 
 .hello {
