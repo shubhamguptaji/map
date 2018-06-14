@@ -45,7 +45,7 @@ function initMap() {
 		center: defaultLocation,
 		zoom: 13
 	});
-
+	var placeAutocomplete = new google.maps.places.Autocomplete(document.getElementById('search-bar-text'));
 	infowindow = new google.maps.InfoWindow();
 	geocoder = new google.maps.Geocoder();
 	getPlaces(defaultLocation, type);
